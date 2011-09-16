@@ -1,0 +1,32 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body {
+	font-family:Georgia;
+	font-style:italic;
+	font-size:1em;
+	padding:10px;
+	background-image:url(images/background-03.png)
+}
+
+header{
+	width: auto;
+	height: 490;
+	
+}
+
+@font-face {
+    font-family: 'QuicksandBold';
+    src: url('Quicksand_Bold-webfont.eot');
+    src: url('Quicksand_Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Quicksand_Bold-webfont.woff') format('woff'),
+         url('Quicksand_Bold-webfont.ttf') format('truetype'),
+         url('Quicksand_Bold-webfont.svg#QuicksandBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+middle {
+	font-family: 'QuicksandBold';
+	font-size: 18px;
+}
