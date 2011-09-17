@@ -14,6 +14,7 @@
 
 body {
     margin: 0px;
+    color: white;
     background-color: #85898F;
 }
 
@@ -27,6 +28,21 @@ nav {
 
 section {
     display: block;
+    margin: auto;
+    width: 810px;
+}
+
+section .text {
+    display: inline-block;
+    width: 420px;
+}
+
+section .image {
+    display: inline-block;
+    width: 300px;
+    margin-top: 50px;
+    margin-left: 80px;
+    vertical-align: top;
 }
 
 footer {
@@ -42,6 +58,14 @@ a.selected {
     color: white;
 }
 
+p {
+    font-size: 15px;
+}
+
+span.first-word {
+    font-size: 26px;
+}
+
 #top-header {
     width: 646px;
     margin: auto;
@@ -53,6 +77,7 @@ a.selected {
     width: 980px;
     margin: auto;
     margin-top: 30px;
+    margin-bottom: 100px;
     text-transform: uppercase;
 }
 
@@ -72,7 +97,6 @@ a.selected {
     width: 1150px;
     margin: auto;
 	font-family:Georgia;
-	font-size:1em;
 }
 
 .gradient {
