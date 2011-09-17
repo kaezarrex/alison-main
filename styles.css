@@ -47,6 +47,13 @@ section .image {
 
 footer {
     display: block;
+    width: 720px;
+    margin: auto;
+    margin-top: 100px;
+}
+
+footer p {
+    font-size: 12px;
 }
 
 a {
