@@ -1,20 +1,6 @@
 @charset "UTF-8";
 /* CSS Document */
 
-body {
-	font-family:Georgia;
-	font-style:italic;
-	font-size:1em;
-	padding:10px;
-	background-image:url(images/background-03.png)
-}
-
-header{
-	width: auto;
-	height: 490;
-	
-}
-
 @font-face {
     font-family: 'QuicksandBold';
     src: url('Quicksand_Bold-webfont.eot');
@@ -26,7 +12,85 @@ header{
     font-style: normal;
 }
 
-middle {
+body {
+    margin: 0px;
+    background-color: #85898F;
+}
+
+header {
+    display: block;
+}
+
+nav {
+    display: block;
+}
+
+section {
+    display: block;
+}
+
+footer {
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: #B6E9C0;
+}   
+
+a.selected {
+    color: white;
+}
+
+#top-header {
+    width: 646px;
+    margin: auto;
+}
+
+#top-nav {
 	font-family: 'QuicksandBold';
-	font-size: 18px;
+	font-size: 36px;
+    width: 980px;
+    margin: auto;
+    margin-top: 30px;
+    text-transform: uppercase;
+}
+
+#top-nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#top-nav ul li {
+    display: inline-block;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+#content {
+    width: 1150px;
+    margin: auto;
+	font-family:Georgia;
+	font-size:1em;
+}
+
+.gradient {
+      /* fallback */
+    background-color: #4F5461;
+
+    /* Safari 4-5, Chrome 1-9 */
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#4F5461), to(#85898F));
+
+    /* Safari 5.1, Chrome 10+ */
+    background: -webkit-linear-gradient(top, #4F5461, #85898F);
+
+    /* Firefox 3.6+ */
+    background: -moz-linear-gradient(top, #4F5461, #85898F);
+
+    /* IE 10 */
+    background: -ms-linear-gradient(top, #4F5461, #85898F);
+
+    /* Opera 11.10+ */
+    background: -o-linear-gradient(top, #4F5461, #85898F);
 }
