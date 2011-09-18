@@ -69,6 +69,13 @@ p {
     font-size: 15px;
 }
 
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+
 span.first-word {
     font-size: 26px;
 }
@@ -86,12 +93,6 @@ span.first-word {
     margin-top: 30px;
     margin-bottom: 100px;
     text-transform: uppercase;
-}
-
-#top-nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
 }
 
 #top-nav ul li {
