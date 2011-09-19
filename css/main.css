@@ -126,6 +126,10 @@ span.first-word {
     position: relative;
 }
 
+#project img {
+    margin-bottom: 40px;
+}
+
 #thumbs ul li {
     display: inline-block;
     margin: 20px;
