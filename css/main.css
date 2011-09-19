@@ -70,7 +70,7 @@ footer p {
 a {
     text-decoration: none;
     color: #B6E9C0;
-}   
+}
 
 a.selected {
     color: white;
@@ -121,6 +121,10 @@ span.first-word {
     text-align: right;
 }
 
+#side-nav a {
+    color: white;
+}
+
 #gallery {
     width: 730px;
     position: relative;
@@ -128,6 +132,10 @@ span.first-word {
 
 #project img {
     margin-bottom: 40px;
+}
+
+#thumbs {
+    overflow: hidden;
 }
 
 #thumbs ul li {
