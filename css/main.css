@@ -113,8 +113,8 @@ span.first-word {
 
 #side-nav {
     position: absolute;
-    left: 10px;
-    margin-top: 20px;
+    top: 20px;
+    left: -220px;
 	font-family: 'QuicksandLightOblique';
 	font-size: 24px;
     text-transform: uppercase;
@@ -123,6 +123,7 @@ span.first-word {
 
 #gallery {
     width: 730px;
+    position: relative;
 }
 
 #thumbs ul li {
