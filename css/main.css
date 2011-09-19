@@ -114,6 +114,7 @@ span.first-word {
 #side-nav {
     position: absolute;
     left: 10px;
+    margin-top: 20px;
 	font-family: 'QuicksandLightOblique';
 	font-size: 24px;
     text-transform: uppercase;
