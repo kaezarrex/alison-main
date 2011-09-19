@@ -149,6 +149,20 @@ span.first-word {
 	font-family:Georgia;
 }
 
+#galleria {
+    width: 100%;
+    height: 0px;
+    height: 100%;
+}
+
+.exit-button {
+    position: absolute;
+    cursor: pointer;
+    top: 20px;
+    right: 20px;
+    z-index: 10001;
+}
+
 .gradient {
       /* fallback */
     background-color: #4F5461;
