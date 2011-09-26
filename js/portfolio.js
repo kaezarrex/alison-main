@@ -9,7 +9,8 @@ $(function(){
     },
 
     bindEvents = function() {
-        var clicks = 0;
+        var clicks = 0,
+            hist = new Hist();
 
         $('#side-nav a').click(function(event){
             var $target = $(event.target.hash),
@@ -45,9 +46,12 @@ $(function(){
                 gal = Galleria.get(clicks++)
                     .bind(Galleria.FULLSCREEN_ENTER, function(e){
                         $exit.show();
+                        window.history.pushState('#cap', '', '#cap');
                     })
                     .bind(Galleria.FULLSCREEN_EXIT, function(e){
                         $exit.hide();
+                        hist.goBack();
+                        console.log(window.history.length);
                     })
                     .enterFullscreen();
 
@@ -55,9 +59,36 @@ $(function(){
                     gal.exitFullscreen();
                 });
 
+                hist.setBack(function(){
+                    gal.exitFullscreen();
+                });
+
             });
         });
 
+    };
+
+    var Hist = function() {
+        var self = this,
+            onBack = function(){},
+            goingBack = false;
+
+        this.setBack = function(callback){
+            self.onBack = callback;
+            window.onpopstate = function(event){
+                goingBack = true;
+                self.onBack();
+                goingBack = false;
+            };
+        };
+
+        this.goBack = function() {
+            if (!goingBack) {
+                //window.history.back();
+                //window.history.replaceState('#', '', '#');
+            }
+        };
+            
     };
 
     bindEvents();
