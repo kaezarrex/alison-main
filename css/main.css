@@ -132,7 +132,7 @@ footer {
 
 #top-nav {
     background: white url(../images/threads.png) repeat-x bottom left;
-	font-size: 36px;
+    font-size: 36px;
     text-transform: uppercase;
     padding: 20px 0px;
 }
@@ -149,17 +149,24 @@ footer {
 }
 
 #side-nav {
-    position: absolute;
-    top: 20px;
-    left: -220px;
-	font-family: 'QuicksandLightOblique';
-	font-size: 24px;
+    font-family: 'QuicksandBook';
+    font-size: 28px;
+    text-align: center;
     text-transform: uppercase;
-    text-align: right;
+    width: 900px;
+    margin: auto;
+    padding-bottom: 20px;
+    margin-bottom: 80px;
+    border-bottom: 2px solid gray;
+}
+
+#side-nav ul li {
+    display: inline-block;
 }
 
 #side-nav a {
     color: white;
+    padding: 5px 30px;
 }
 
 #gallery {
@@ -183,7 +190,7 @@ footer {
 #content {
     width: 1150px;
     margin: auto;
-	font-family:Georgia;
+    font-family:Georgia;
     padding-bottom: 100px;
 }
 
