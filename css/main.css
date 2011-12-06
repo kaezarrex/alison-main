@@ -81,9 +81,9 @@ section .image {
 }
 
 footer {
-    background: white url(../images/threads.png) repeat-x top left;
+    background: #85898F url(../images/threads-bottom.png) repeat-x top left;
     display: block;
-    padding: 20px 30px;
+    padding: 25px 30px 10px;;
 }
 
 footer p {
@@ -143,7 +143,6 @@ h1 {
 footer {
     font-family: 'QuicksandBook';
     color: #F26B5D;
-    background-color: white;
 }
 
 #top-header {
@@ -152,10 +151,10 @@ footer {
 }
 
 #top-nav {
-    background: white url(../images/threads.png) repeat-x bottom left;
+    background: #4F5461 url(../images/threads-top.png) repeat-x bottom left;
     font-size: 36px;
     text-transform: uppercase;
-    padding: 20px 0px;
+    padding: 19px 0px;
     position: fixed;
     top: 0;
     left: 0;
