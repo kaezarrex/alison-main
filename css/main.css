@@ -63,12 +63,13 @@ nav {
 section {
     display: block;
     margin: auto;
-    width: 810px;
+    width: 900px;
 }
 
 section .text {
     display: inline-block;
     width: 420px;
+    margin-bottom: 30px;
 }
 
 section .image {
@@ -88,6 +89,12 @@ footer {
 footer p {
     font-size: 14px;
     margin: 5px;
+}
+
+figure,
+figcaption {
+    display: block;
+    margin: 0px;
 }
 
 a {
@@ -111,6 +118,15 @@ ul {
 
 span.first-word {
     font-size: 26px;
+}
+
+h1 {
+    font-family: 'QuicksandLight';
+    font-size: 28px;
+    text-transform: uppercase;
+    margin: 0px 110px;
+    padding: 10px;
+    border-bottom: 1px solid white;
 }
 
 #header-wrapper {
@@ -204,6 +220,26 @@ footer {
     width: 100%;
     height: 0px;
     height: 100%;
+}
+
+#press figure img {
+    width: 200px;
+    height: 200px;
+}
+
+#press figcaption {
+    margin-top: 10px;
+}
+
+#press a {
+    font-family: 'QuicksandBold';
+    font-size: 11px;
+    color: white;
+}
+
+#press li {
+    display: inline-block;
+    margin: 10px;
 }
 
 .exit-button {
