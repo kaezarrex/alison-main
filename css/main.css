@@ -115,6 +115,7 @@ span.first-word {
 
 #header-wrapper {
     background-color: #4F5461;
+    padding-top: 78px;
     padding-bottom: 40px;
 }
 
@@ -135,6 +136,11 @@ footer {
     font-size: 36px;
     text-transform: uppercase;
     padding: 20px 0px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
 }
 
 #top-nav ul li {
