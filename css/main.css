@@ -49,7 +49,6 @@ body {
     margin: 0px;
     color: white;
     background-color: white;
-    -webkit-mask-image: url(../images/fabric.jpg);
 }
 
 header {
@@ -83,7 +82,7 @@ section .image {
 footer {
     background: #85898F url(../images/threads-bottom.png) repeat-x top left;
     display: block;
-    padding: 25px 30px 10px;;
+    padding: 15px 30px 0px;
 }
 
 footer p {
@@ -135,7 +134,7 @@ h1 {
 
 #header-wrapper {
     background-color: #4F5461;
-    padding-top: 78px;
+    padding-top: 50px;
     padding-bottom: 40px;
 }
 
@@ -152,9 +151,9 @@ footer {
 
 #top-nav {
     background: #4F5461 url(../images/threads-top.png) repeat-x bottom left;
-    font-size: 36px;
+    font-size: 28px;
     text-transform: uppercase;
-    padding: 19px 0px;
+    padding: 10px 0px;
     position: fixed;
     top: 0;
     left: 0;
@@ -271,4 +270,6 @@ footer {
 
     /* Opera 11.10+ */
     background: -o-linear-gradient(top, #4F5461, #85898F);
+
+    #background-image: url(../images/fabrictexture.png);
 }
