@@ -47,8 +47,8 @@
 
 body {
     margin: 0px;
-    color: white;
-    background-color: white;
+    color: #4F5461;
+    background: white url(../images/arches.png) repeat top left;
 }
 
 header {
@@ -61,33 +61,27 @@ nav {
 
 section {
     display: block;
-    margin: auto;
-    margin-bottom: 30px;
-    width: 900px;
+    margin: 30px auto;
+    width: 800px;
 }
 
-section .text {
-    display: inline-block;
-    width: 515px;
-}
-
-section .image {
-    display: inline-block;
-    width: 300px;
-    margin-top: 10px;
-    margin-left: 80px;
-    vertical-align: top;
-}
-
-footer {
-    background: #85898F url(../images/threads-bottom.png) repeat-x top left;
+#bottom-footer {
+    background-color: #4F5461;
     display: block;
-    padding: 15px 30px 0px;
+    padding: 15px 0;
+    margin-top: 60px;
 }
 
-footer p {
-    font-size: 14px;
-    margin: 5px;
+#bottom-footer p {
+    font-family: 'QuicksandBold';
+    font-size: 12px;
+    text-align: center;
+    color: white;
+    margin: 4px 0;
+}
+
+#bottom-footer a {
+    color: white;
 }
 
 figure,
@@ -98,16 +92,23 @@ figcaption {
 
 a {
     text-decoration: none;
-    color: #B6E9C0;
+    color: #4F5461;
 }
 
-a.selected {
-    color: white;
+a.selected, a:hover, #side-nav a:hover {
+    color: #F26B5D;
 }
 
-p {
+section p {
+    font-family: 'QuicksandBook';
     margin: 0px 0px 15px 0px;
-    font-size: 15px;
+    font-size: 14px;
+    line-height: 18px;
+    width: 430px;
+}
+
+section img {
+   float: right;
 }
 
 ul {
@@ -121,76 +122,72 @@ span.first-word {
 }
 
 h1 {
-    font-family: 'QuicksandLight';
-    font-size: 28px;
-    text-transform: uppercase;
-    width: 960px;
+    font-family: 'QuicksandBook';
+    font-size: 32px;
+    font-weight: normal;
+    text-align: center;
+    width: 800px;
     margin: auto;
-    margin-top: 0px;
-    margin-bottom: 10px;
-    padding: 10px;
-    border-bottom: 1px solid white;
 }
 
 #header-wrapper {
-    background-color: #4F5461;
+    width: 720px;
+    margin: auto;
     padding-top: 50px;
-    padding-bottom: 40px;
-}
-
-#top-nav,
-footer {
-    font-family: 'QuicksandBook';
-    color: #F26B5D;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #F26B5D;
 }
 
 #top-header {
-    width: 646px;
+    width: 564px;
     margin: auto;
 }
 
 #top-nav {
-    background: #4F5461 url(../images/threads-top.png) repeat-x bottom left;
-    font-size: 28px;
+    font-family: 'QuicksandBook';
+    color: #F26B5D;
+}
+
+#top-nav {
+    font-size: 24px;
     text-transform: uppercase;
-    padding: 10px 0px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1;
+    padding: 20px 0 20px 30px;
+    width: 760px;
+    margin: auto;
 }
 
 #top-nav ul li {
     display: inline-block;
-    margin-left: 20px;
-    margin-right: 20px;
-    padding: 2px;
+    min-width: 150px;
+    padding: 0 17px;
 }
 
 #top-nav a {
+    text-align: center;
+    display: block;
+}
+
+#top-nav a.selected {
     color: #F26B5D;
 }
 
 #side-nav {
     font-family: 'QuicksandBook';
-    font-size: 28px;
-    text-align: center;
+    font-size: 18px;
     text-transform: uppercase;
-    width: 900px;
-    margin: auto;
-    padding-bottom: 20px;
-    margin-bottom: 80px;
-    border-bottom: 2px solid gray;
-}
-
-#side-nav ul li {
-    display: inline-block;
+    background-color: #4F5461;
+    padding: 20px;
+    position: absolute;
+    top: 0px;
+    left: -80px;
 }
 
 #side-nav a {
     color: white;
-    padding: 5px 30px;
+}
+
+#side-nav li {
+    padding: 5px 0;
 }
 
 #gallery {
@@ -212,10 +209,11 @@ footer {
 }
 
 #content {
-    width: 1150px;
+    position: relative;
+    width: 960px;
     margin: auto;
-    font-family:Georgia;
-    padding-bottom: 50px;
+    padding: 10px 0;
+    background-color: white;
 }
 
 #galleria {
@@ -224,9 +222,14 @@ footer {
     height: 100%;
 }
 
+#press {
+    width: 865px;
+}
+
 #press figure img {
     width: 200px;
     height: 200px;
+    float: none;
 }
 
 #press figcaption {
@@ -239,9 +242,13 @@ footer {
     color: white;
 }
 
+#press ul {
+    background-color: #BDF0C7;
+}
+
 #press li {
     display: inline-block;
-    margin: 10px;
+    margin: 10px 0 0 10px;
 }
 
 .exit-button {
@@ -252,24 +259,10 @@ footer {
     z-index: 10001;
 }
 
-.gradient {
-      /* fallback */
-    background-color: #4F5461;
-
-    /* Safari 4-5, Chrome 1-9 */
-    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#4F5461), to(#85898F));
-
-    /* Safari 5.1, Chrome 10+ */
-    background: -webkit-linear-gradient(top, #4F5461, #85898F);
-
-    /* Firefox 3.6+ */
-    background: -moz-linear-gradient(top, #4F5461, #85898F);
-
-    /* IE 10 */
-    background: -ms-linear-gradient(top, #4F5461, #85898F);
-
-    /* Opera 11.10+ */
-    background: -o-linear-gradient(top, #4F5461, #85898F);
-
-    #background-image: url(../images/fabrictexture.png);
+.orange-rule {
+    border-top: 1px solid #F26B5D;
+    width: 100px;
+    height: 0px;
+    margin: 8px 5px;
+    display: inline-block;
 }
