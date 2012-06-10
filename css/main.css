@@ -90,6 +90,13 @@ figcaption {
     margin: 0px;
 }
 
+figcaption {
+    text-align: center;
+    margin-top: 5px;
+    width: 200px;
+    height: 0px;
+}
+
 a {
     text-decoration: none;
     color: #4F5461;
@@ -195,13 +202,6 @@ h1 {
     position: relative;
 }
 
-#gallery figcaption {
-    text-align: center;
-    margin-top: 5px;
-    width: 200px;
-    height: 0px;
-}
-
 #gallery a {
     font-family: 'QuicksandBold';
     font-size: 14px;
@@ -247,17 +247,13 @@ h1 {
 }
 
 #press figcaption {
-    margin-top: 10px;
+    margin: 10px 0;
 }
 
 #press a {
     font-family: 'QuicksandBold';
     font-size: 11px;
-    color: white;
-}
-
-#press ul {
-    background-color: #BDF0C7;
+    color: #F26B5D;
 }
 
 #press li {
