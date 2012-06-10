@@ -1,9 +1,11 @@
 $(function(){
 
     var init = function() {
-        var $thumbs = $('#thumbs');
+        var $thumbs = $('#thumbs'),
+            $target = $('#print');
 
-        $thumbs.height($($thumbs.children().get(0)).height());
+        $thumbs.children().hide();
+        $target.show();
 
         Galleria.loadTheme('js/galleria/themes/classic/galleria.classic.min.js');
     },
@@ -15,10 +17,10 @@ $(function(){
             var $target = $(event.target.hash),
                 $thumbs = $('#thumbs');
 
-            event.preventDefault();
+            $thumbs.children().hide();
+            $target.show();
 
-            $thumbs.height($target.height());
-            $thumbs.scrollTop($target.position().top + $thumbs.scrollTop());
+            event.preventDefault();
         });
 
         $('#thumbs li a').click(function(event){

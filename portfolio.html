@@ -3,6 +3,7 @@
     <head>
         <title>Alison Citron - Portfolio</title>
         <link href="css/main.css" rel="stylesheet" type="text/css" />
+        <link href="css/font-awesome.css" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
         <script src="js/galleria/galleria-1.2.5.min.js"></script>
         <script src="js/portfolio.js"></script>
@@ -10,24 +11,25 @@
 
     <body>
 
-        <div id="header-wrapper">
-            <header id="top-header">
-                <a href="//alisoncitron.com">
-                    <img src="images/header.png" width="564" height="93" alt="Alison Citron" />
-                </a>
-            </header>
-        </div>
+        <div id="body-wrapper">
 
-        <nav id="top-nav">
-            <ul>
-                <li><a href="index.html">About Me</a></li>
-                <li><a href="portfolio.html" class="selected">Portfolio</a></li>
-                <li><a href="http://lovecitron.com">Shop</a></li>
-                <li><a href="http://alisoncitron.com/blog">Blog</a></li>
-            </ul>
-        </nav>
+            <div id="header-wrapper">
+                <header id="top-header">
+                    <a href="//alisoncitron.com">
+                        <img src="images/header.png" width="564" height="93" alt="Alison Citron" />
+                    </a>
+                </header>
+            </div>
 
-        <div>
+            <nav id="top-nav">
+                <ul>
+                    <li><a href="index.html">About Me</a></li>
+                    <li><a href="portfolio.html" class="selected">Portfolio</a></li>
+                    <li><a href="http://lovecitron.com">Shop</a></li>
+                    <li><a href="http://alisoncitron.com/blog">Blog</a></li>
+                </ul>
+            </nav>
+
             <div id="content">
 
                 <nav id="side-nav">
@@ -194,19 +196,36 @@
                 </section>
 
             </div>
-        </div>
-        <div id="galleria"></div>
-        <div class="exit-button" style="display: none;">
-            <img src="images/x.png">
+
+            <div id="galleria"></div>
+            <div class="exit-button" style="display: none;">
+                <i class="icon-remove"></i>
+            </div>
+
+            <div class="push"></div>
         </div>
 
         <footer id="bottom-footer">
-            <p>
-                Alison Citron is a graphic designer living in Raleigh, NC. Get in touch with her at: alison(dot)citron(at)gmail(dot)com.
-            </p>
-            <p>
-                Site Design by <a href="#">Alison Citron</a>. Developed by <a href="https://plus.google.com/113035680207713448980">David Hazinski</a>.
-            </p>
+            <div id="bottom-footer-content">
+                <div class="column">
+                    <h2>Contact</h2>
+                    <p>alison(dot)citron(at)gmail(dot)com</p>
+                </div>
+                <div class="column">
+                    <h2>Credit</h2>
+                    <p>Site Design by <a href="#">Alison Citron</a>.</p>
+                    <p>Developed by <a href="https://plus.google.com/113035680207713448980">David Hazinski</a>.</p>
+                </div>
+                <div class="column">
+                    <h2>Follow</h2>
+                    <p>
+                        <a href="http://twitter.com/thealisoncitron"><i class="icon-twitter social"></i></a>
+                        <a href="http://www.facebook.com/alison.citron"><i class="icon-facebook social"></i></a>
+                        <a href="http://pinterest.com/iamwhimsical/"><i class="icon-pinterest social"></i></a>
+                    </p>
+                </div>
+                </p>
+            </div>
         </footer>
 
     </body>

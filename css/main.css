@@ -45,6 +45,10 @@
     font-style: normal;
 }
 
+html, body {
+    height: 100%;
+}
+
 body {
     margin: 0px;
     color: #4F5461;
@@ -65,22 +69,37 @@ section {
     width: 800px;
 }
 
+#body-wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -94px; /* the bottom margin is the negative value of the footer's height */
+}
+
 #bottom-footer {
     background-color: #4F5461;
     display: block;
     padding: 15px 0;
-    margin-top: 60px;
+    height: 64px;
+}
+
+.push {
+    height: 100px;
 }
 
 #bottom-footer p {
-    font-family: 'QuicksandBold';
+    font-family: 'QuicksandBook';
     font-size: 12px;
-    text-align: center;
-    color: white;
-    margin: 4px 0;
+    margin: 8px 0;
 }
 
 #bottom-footer a {
+    color: white;
+}
+
+#bottom-footer-content {
+    width: 800px;
+    margin: auto;
     color: white;
 }
 
@@ -137,6 +156,14 @@ h1 {
     margin: auto;
 }
 
+h2 {
+    font-family: 'QuicksandBook';
+    font-weight: normal;
+    text-transform: uppercase;
+    font-size: 14px;
+    margin: 0;
+}
+
 #header-wrapper {
     width: 720px;
     margin: auto;
@@ -186,7 +213,7 @@ h1 {
     padding: 20px;
     position: absolute;
     top: 0px;
-    left: -80px;
+    left: 0px;
 }
 
 #side-nav a {
@@ -224,7 +251,7 @@ h1 {
 
 #content {
     position: relative;
-    width: 960px;
+    width: 1120px;
     margin: auto;
     padding: 10px 0;
     background-color: white;
@@ -267,6 +294,7 @@ h1 {
     top: 20px;
     right: 20px;
     z-index: 10001;
+    font-size: 40px;
 }
 
 .orange-rule {
@@ -275,4 +303,18 @@ h1 {
     height: 0px;
     margin: 8px 5px;
     display: inline-block;
+}
+
+.column {
+    padding-left: 80px;
+    float: left;
+}
+
+.social {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.social:hover {
+    color: #F26B5D;
 }
