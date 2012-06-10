@@ -22,7 +22,7 @@ $(function(){
         });
 
         $('#thumbs li a').click(function(event){
-            var url = event.target.parentNode.href;
+            var url = $(this)[0].href;
 
             event.preventDefault();
 

@@ -99,7 +99,7 @@ a.selected, a:hover, #side-nav a:hover {
     color: #F26B5D;
 }
 
-section p {
+#about p {
     font-family: 'QuicksandBook';
     margin: 0px 0px 15px 0px;
     font-size: 14px;
@@ -107,7 +107,7 @@ section p {
     width: 430px;
 }
 
-section img {
+#about img {
    float: right;
 }
 
@@ -193,6 +193,20 @@ h1 {
 #gallery {
     width: 730px;
     position: relative;
+}
+
+#gallery figcaption {
+    text-align: center;
+    margin-top: 5px;
+    width: 200px;
+    height: 0px;
+}
+
+#gallery a {
+    font-family: 'QuicksandBold';
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #F26B5D;
 }
 
 #project img {
