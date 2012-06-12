@@ -80,11 +80,11 @@ section {
     background-color: #4F5461;
     display: block;
     padding: 15px 0;
-    height: 64px;
+    height: 70px;
 }
 
 .push {
-    height: 100px;
+    height: 110px;
 }
 
 #bottom-footer p {
@@ -306,7 +306,7 @@ h2 {
 }
 
 .column {
-    padding-left: 80px;
+    padding-left: 45px;
     float: left;
 }
 
