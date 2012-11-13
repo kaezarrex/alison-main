@@ -12,7 +12,8 @@ p {
     color: #928F80;
 }
 
-#top-menu {
+#top-menu,
+#bottom-menu {
     text-align: center; 
     font-size: 1.2em;
     text-transform: uppercase;
@@ -30,6 +31,20 @@ p {
 #top-menu .menu-item a:hover {
     color: white;
     background-color: #D99172;
+    text-decoration: none;
+}
+
+#bottom-menu {
+    margin-top: 50px;
+    padding: 20px;
+}
+
+#bottom-menu .menu-item a {
+    color: #B7A371;
+    padding: 20px;
+}
+
+#bottom-menu .menu-item a:hover {
     text-decoration: none;
 }
 
