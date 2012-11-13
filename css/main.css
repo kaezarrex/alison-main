@@ -1,3 +1,7 @@
+body {
+    background: white url(../img/star-tile.png) repeat;
+}
+
 h3 {
     color: #D99172;
     text-transform: uppercase;
