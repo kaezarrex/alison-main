@@ -1,14 +1,23 @@
 body {
     background: white url(../img/star-tile.png) repeat;
+    font-family: "futura-pt",sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    padding-top: 20px;
 }
 
 h3 {
     color: #D99172;
+    font-size: 2.1em;
+    font-weight: 500;
     text-transform: uppercase;
 }
 
 p {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: "chaparral-pro", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.1em;
     color: #928F80;
 }
 
@@ -20,7 +29,7 @@ p {
 }
 
 #top-menu .menu-item {
-    margin-top: 50px;
+    padding-top: 20px;
 }
 
 #top-menu .menu-item a {
@@ -64,45 +73,46 @@ p {
 }
 
 #statement .line1 {
-    padding-top: 30px;
-    font-size: 4em;
+    font-size: 4.4em;
     line-height: 1.1em;
 }
 
 #statement .line2,
 #statement .line3 {
-    font-size: 2.2em;
+    font-size: 2.4em;
     line-height: 1em;
     font-style: italic;
 }
 
 #statement .line4 {
     color: #C3AD80;
-    font-size: 2.2em;
-    line-height: 3em;
+    font-size: 2.5em;
+    line-height: 2em;
     text-transform: uppercase;
 }
 
 #statement .line5,
 #statement .line6 {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: "chaparral-pro", serif;
+    font-weight: 600;
+    font-style: italic;
     color: #B7A371;
-    font-size: 1.6em;
+    font-size: 1.8em;
     line-height: 1em;
     font-style: italic;
 }
 
 #statement .line7 {
-    padding-top: 30px;
+    padding-top: 25px;
     color: #8B7C5A;
-    font-size: 4.6em;
+    font-size: 5.2em;
     line-height: 0.7em;
     text-transform: uppercase;
 }
 
 #statement .line8 {
     color: #77694A;
-    font-size: 2.2em;
+    font-size: 2.7em;
     line-height: 1em;
     text-transform: uppercase;
 }
