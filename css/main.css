@@ -6,27 +6,40 @@ body {
     padding-top: 20px;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4, h5 {
     font-family: "futura-pt",sans-serif;
     text-transform: uppercase;
     font-weight: 500;
     font-style: normal;
 }
 
-h1 {
-    font-size: 5.2em;
-    line-height: 0.7em;
+h1, h2, h4 {
     color: #D0B88E;
 }
 
+h3, h5 {
+    color: #D99172;
+}
+
+h1 {
+    font-size: 5.2em;
+    line-height: 0.7em;
+}
+
 h2 {
-    color: #D0B88E;
     font-size: 2.8em;
 }
 
 h3 {
-    color: #D99172;
     font-size: 2.1em;
+}
+
+h4 {
+    font-size: 1.8em;
+}
+
+h5 {
+    font-size: 1.4em;
 }
 
 p {
