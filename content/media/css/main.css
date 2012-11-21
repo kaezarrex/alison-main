@@ -145,3 +145,7 @@ p {
     line-height: 1em;
     text-transform: uppercase;
 }
+
+#portfolio-nav {
+    text-align: right;
+}

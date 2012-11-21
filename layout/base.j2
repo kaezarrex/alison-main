@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% block starthead %}{% endblock starthead %}
+        <meta charset="{{ resource.meta.charset }}">
+
+        <title>{% block title %}{{ resource.meta.title }}{% endblock %}</title>
+        <meta name="description" content="{{ resource.meta.description }}">
+        <meta name="author" content="{{ resource.meta.author }}">
+
+        <meta name="viewport" content="{{ resource.meta.viewport }}">
+
+        {% block favicons %}
+        <link rel="shortcut icon" href="{{ media_url('/favicon.ico') }}">
+        {% endblock favicons %}
+
+        {% block css %}
+        <link rel="stylesheet" href="{{ media_url('css/bootstrap.min.css') }}">
+        <link rel="stylesheet" href="{{ media_url('css/font-awesome.css') }}">
+        <link rel="stylesheet" href="{{ media_url('css/main.css') }}">
+        {% endblock css %}
+
+        {% block headjs %}
+        <script type="text/javascript" src="//use.typekit.net/miw4xkh.js"></script>
+        <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+        {% endblock headjs %}
+        {% block endhead %}{% endblock endhead %}
+    </head>
+    <body id="{{ resource.meta.id if resource.meta.id else resource.slug }}">
+        {% block content %}
+        <div class="container">
+            {% block container %}
+            <div id="main" role="main">
+                <header>
+                    {% block nav %}
+                    <div id="top-menu" class="row">
+                        <div class="span12 visible-phone"><a href="#"><img src="{{ media_url('img/oneandonlylogo.png') }}"></a></div>
+                        <div class="span2 menu-item"><a href="{{ content_url('pricing') }}">Pricing</a></div>
+                        <div class="span2 menu-item"><a href="{{ content_url('weddings') }}">Weddings</a></div>
+                        <div class="span4 hidden-phone"><a href="/"><img src="{{ media_url('img/oneandonlylogo.png') }}"></a></div>
+                        <div class="span2 menu-item"><a href="#">Journal</a></div>
+                        <div class="span2 menu-item"><a href="#">Work</a></div>
+                    </div>
+                    {% endblock %}
+                </header>
+                <section class="content">
+                    {% block main %}
+                    {% endblock main %}
+                </section>
+            </div>
+            {% endblock container %}
+        </div> <!--! end of #container -->
+        <footer>
+            <div id="bottom-menu" style="background-color: #F0EFF1;">
+                <div class="container">
+                    <div class="row">
+                        <div class="span3 offset2 menu-item"><a href="{{ content_url('contact') }}">Contact</a></div>
+                        <div class="span2 menu-item"><a href="#">Love</a></div>
+                        <div class="span3 menu-item"><a href="#">Work With Me</a></div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        {% endblock content%}
+        {% block js %}
+
+        {% block scripts %}
+        {% endblock scripts %}
+
+        {% block analytics %}
+        {% include "analytics.j2" %}
+        {% endblock analytics %}
+
+        {% endblock js %}
+    </body>
+</html>
