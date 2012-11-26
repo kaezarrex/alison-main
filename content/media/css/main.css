@@ -152,4 +152,10 @@ p {
 
 #portfolio-nav {
     text-align: right;
+    text-transform: uppercase;
+}
+
+#portfolio-nav a {
+    font-weight: normal;
+    color: #D99172;
 }
