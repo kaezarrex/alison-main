@@ -57,6 +57,10 @@ p {
     text-transform: uppercase;
 }
 
+#top-menu {
+    margin-bottom: 40px;
+}
+
 #top-menu .menu-item {
     padding-top: 20px;
 }
