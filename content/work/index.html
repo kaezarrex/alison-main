@@ -1,43 +1,24 @@
 ---
-extends: base.j2
-default_block: main
+extends: portfolio.j2
 title: ???
 description: ???
 ---
 
-<div class="row">
-    <div class="span2">
-        <ul id="portfolio-nav" class="unstyled">
-            <li><a href="#">Baby Feifs</a></li>
-            <li><a href="#">Jason & Kellsie</a></li>
-        </ul>
-    </div>
-    <div class="span9">
+{% block carousel %}
+<div class="item active"><img src="//placekitten.com/1024/768"></div>
+<div class="item"><img src="//placekitten.com/1280/960"></div>
+<div class="item"><img src="//placekitten.com/800/600"></div>
+{% endblock %}
 
-        <div id="myCarousel" class="carousel slide" data-interval="false">
-            <!-- Carousel items -->
-            <div class="carousel-inner">
-                <div class="item active"><img src="//placekitten.com/1024/768"></div>
-                <div class="item"><img src="//placekitten.com/1280/960"></div>
-                <div class="item"><img src="//placekitten.com/800/600"></div>
-            </div>
-            <!-- Carousel nav -->
-            <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-            <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
-        </div>
-
-
-        <h4>Brand Development</h4>
-        <h5>Begins at $3000.00</h5>
-        <p>
-        Is your business not growing as quickly as you’d like? Does your brand lack a plan? Do you
-        feel vaguely ashamed whenever you point someone to your website? Do you even know
-        where to begin?
-        </p>
-        <p>
-        If you feel that nothing in your visual arsenal accurately represents your business to the
-        world, but you’re not even
-        </p>
-
-    </div>
-</div>
+{% block description %}
+<h4>Ottersen</h4>
+<p>
+    Everything in this wedding suite is handmade. I hand lettered all of the text and edge painted the programs. We used bright accents, like hot pink envelopes lined with patterned paper and bright orange vellum response envelopes.
+</p>
+<p>
+    I also wanted to include watercolor elements, so I painted the lettering on the RSVP. I also did watercolor washes on the ceremony programs and each individual element of the invitation suite.
+</p>
+<p>
+    <a href="http://ohsobeautifulpaper.com/2012/10/sarah-ryans-bright-hand-lettered-wedding-invitations/">Featured On Oh So Beautiful Paper</a>
+</p>
+{% endblock %}
