@@ -1,0 +1,22 @@
+---
+extends: portfolio.j2
+title: ???
+description: ???
+---
+
+{% block carousel %}
+<div class="item active"><img src="{{ media_url('portfolio/walking-tour/00.jpg') }}"></div>
+<div class="item"><img src="{{ media_url('portfolio/walking-tour/01.jpg') }}"></div>
+<div class="item"><img src="{{ media_url('portfolio/walking-tour/02.jpg') }}"></div>
+<div class="item"><img src="{{ media_url('portfolio/walking-tour/03.jpg') }}"></div>
+<div class="item"><img src="{{ media_url('portfolio/walking-tour/04.jpg') }}"></div>
+<div class="item"><img src="{{ media_url('portfolio/walking-tour/05.jpg') }}"></div>
+<div class="item"><img src="{{ media_url('portfolio/walking-tour/06.jpg') }}"></div>
+<div class="item"><img src="{{ media_url('portfolio/walking-tour/07.jpg') }}"></div>
+<div class="item"><img src="{{ media_url('portfolio/walking-tour/08.jpg') }}"></div>
+{% endblock %}
+
+{% block description %}
+<h4>Walking Tour</h4>
+<p>Fold up map for a self guided sustainability tour around NC State's campus.</p>
+{% endblock %}

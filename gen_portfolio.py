@@ -58,7 +58,8 @@ if __name__ == '__main__':
             image_string += '\n'.join(IMAGE_TEMPLATE % new for old, new in image_map[1:])
 
             try:
-                print os.path.join(MEDIA_PATH, page_name)
+                print '<li><a href="/work/%s">%s</a></li>' % (page_name, os.path.basename(root))
+                #print os.path.join(MEDIA_PATH, page_name)
                 os.makedirs(os.path.join(MEDIA_PATH, page_name))
             except OSError:
                 pass
