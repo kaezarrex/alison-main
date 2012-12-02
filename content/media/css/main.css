@@ -159,3 +159,20 @@ p {
     font-weight: normal;
     color: #D99172;
 }
+
+.carousel .item > img {
+    height: 500px;
+    margin: auto;
+}
+
+@media (max-width: 979px) and (min-width: 768px) {
+    .carousel .item > img {
+        height: 380px;
+    }
+}
+
+@media (max-width: 767px) {
+    .carousel .item > img {
+        height: auto;
+    }
+}
