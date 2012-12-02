@@ -1,10 +1,42 @@
 ---
 extends: base.j2
-default_block: main
 title: ???
 description: ???
 ---
 
+{% block scripts %}
+<script>
+    function openPopup(name, url, width, height){
+
+        var properties = [
+                'width='+width,
+                'height='+height,
+                'location=false',
+                'menubar=false',
+                'resizable=false',
+                'status=true',
+                'toolbar=false'
+            ],
+            popup = window.open(url, name, properties.join(','));
+
+        if(window.focus) {
+            popup.focus();
+        }
+
+        return popup;
+    }
+
+    $('.survey-link').click(function(event) {
+        var type = $(this).attr('data-survey');
+
+        event.preventDefault();
+
+        openPopup('hi', 'http://survey.oneandonly.im/' + type, screen.width / 2, screen.height / 5 * 4);
+    });
+</script>
+{% endblock %}
+
+{% block main %}
 <div style="text-align: center;">
     <h2>Pricing</h2>
     <h5 class="offset1 span10" style="color: #494841;">I offer several levels of service in order to best meet your needs (and budget).</h5>
@@ -14,47 +46,46 @@ description: ???
         <h4>Brand Development</h4>
         <h5>Begins at $3000.00</h5>
         <p>
-        Is your business not growing as quickly as you’d like? Does 
-        your brand lack a plan? Do you feel vaguely ashamed when- 
-        ever you point someone to your website? Do you even 
-        know where to begin? 
+        If you’ve carefully thought about every aspect of your business except for the branding, this is the package for you. Together we will take a realistic look at your business, and come up with a plan for what you need to put your best step forward. Although each business present its own unique challenges, I’ve come up with method to get your brand on the right track:
         </p>
         <p>
-        If you feel that nothing in your visual arsenal accurately
-        represents your business to the world, but you’re not even
-        sure how to being fixing it, the brand development package
-        is for you. Together, we will take a realistic look at your
-        brand (or lack thereof) and come up with a plan for what
-        you need to put your best foot forward. Although each
-        business requires its own unique solution, this all inclusive
-        package often starts with logo design, website design and
-        development, and packaging design, and gets down to the
-        nitty gritty details - like Facebook icons, business cards,
-        what fonts to use in your business correspondence, and
-        other ways to make your business stand apart from the
-        crowd.
+        We start off with a 30 minute consultation about your business, and what you hope to achieve.
+        </p>
+        <p>
+        I provide you with a detailed proposal outlining the areas we will work to improve – and our timeline from zero to finished. This can range from big picture items like a logo or website to nitty gritty details like your Facebook business page icon.
+        </p>
+        <p>
+        Once you’ve signed off on the proposal, I get to work, checking in along the way.
+        </p>
+        <p>
+        The final result: Brand materials that are perfectly tailored to your business’s unique needs, and outstanding design work that you’re proud to share with your customers!
+        </p>
+        <p>
+
+        <a href="#" class="survey-link" data-survey="brand-development">Get more information here.</a>
         </p>
     </div>
     <div class="span5">
         <h4>Individual Projects</h4>
         <h5>Price dependent on project</h5>
         <p>
-        If you have just a single, specific project in mind, I’m happy
-        to help! Individual Projects applies to work with clearly
-        outlined constraints, and one completed product at the end
-        of the project.
+        If you have a single, specific design project that you need completed, I’m happy to help! To get started, please <a href="#" class="survey-link" data-survey="individual-project">fill out a survey</a> and I will respond with a project proposal & estimated cost.
+        </p>
+        <h4 style="margin-top: 20px;">Brand Consultation</h4>
+        <p>
+         If you’re just starting out, or simply wary of making a big investment without doing more research, schedule a brand and style consultation with me!
         </p>
         <p>
-        To get started, please fill out our survey, and I will respond
-        with a proposed timeline and estimate.
+         We talk about your specific business, action steps you can take on your own to make your brand instantly more cohesive, and I can answer any questions or concerns you may have. For $150 dollars you will receive:
+         A 60 minute, one on one phone, skype, or in person (if you’re local!) conversation with me.
+         A pdf for you to keep, detailing what we discussed, and the action steps I’ve suggested (so you don’t have to worry about keeping notes while we talk.)
         </p>
-        <h4 style="margin-top: 20px;">Brand & Style Consultation</h4>
-        <h5>$150.00</h5>
         <p>
-        A phone consultation to help diagnose your biggest brand
-        problems - before you can afford a full time designer. I’ll
-        give you tips on keeping your brand consistent, and making
-        good style choices before you have to splash out.
+         The best part? If, after the consultation you are unsatisfied with your experience, I will give you a full refund.
+        </p>
+        <p>
+        <a href="#" class="survey-link" data-survey="consultation">Let’s do it!</a>
         </p>
     </div>
 </div>
+{% endblock %}
