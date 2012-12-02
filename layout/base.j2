@@ -36,7 +36,7 @@
                     <div id="top-menu" class="row">
                         <div class="span12 visible-phone"><a href="#"><img src="{{ media_url('img/oneandonlylogo.png') }}"></a></div>
                         <div class="span2 menu-item"><a href="{{ content_url('pricing') }}">Pricing</a></div>
-                        <div class="span2 menu-item"><a href="{{ content_url('weddings') }}">Weddings</a></div>
+                        <div class="span2 menu-item"><a href="{{ content_url('gettingmarried') }}">Weddings</a></div>
                         <div class="span4 hidden-phone"><a href="/"><img src="{{ media_url('img/oneandonlylogo.png') }}"></a></div>
                         <div class="span2 menu-item"><a href="#">Journal</a></div>
                         <div class="span2 menu-item"><a href="{{ content_url('work') }}">Work</a></div>
@@ -65,6 +65,7 @@
         {% block js %}
         <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
         <script type="text/javascript" src="http://twitter.github.com/bootstrap/assets/js/bootstrap.js"></script>
+        <script type="text/javascript" src="{{ media_url('js/main.js') }}"></script>
         {% block scripts %}
         {% endblock scripts %}
 
