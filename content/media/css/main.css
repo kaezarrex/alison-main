@@ -164,6 +164,17 @@ p {
     color: #D0B88E;
 }
 
+.social {
+    font-size: 4em;
+    color: #D0B88E;
+    text-align: center;
+}
+
+.social span {
+    display: inline-block;
+    padding: 20px 0;
+}
+
 .carousel .item > img {
     height: 500px;
     margin: auto;
