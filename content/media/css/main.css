@@ -160,6 +160,10 @@ p {
     color: #D99172;
 }
 
+#portfolio-nav a.gold {
+    color: #D0B88E;
+}
+
 .carousel .item > img {
     height: 500px;
     margin: auto;
