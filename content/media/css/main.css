@@ -11,6 +11,7 @@ h1, h2, h3, h4, h5 {
     text-transform: uppercase;
     font-weight: 400;
     font-style: normal;
+    letter-spacing: 3px;
 }
 
 h1, h2, h4 {
@@ -32,7 +33,6 @@ h2 {
 
 h3 {
     font-size: 24pt;
-    letter-spacing: 3px;
 }
 
 h4 {
@@ -51,11 +51,21 @@ p {
     color: #928F80;
 }
 
+a {
+    color: #D99172;
+}
+
+a:hover {
+    color: #D0B88E;
+
+}
+
 #top-menu,
 #bottom-menu {
     text-align: center;
     font-size: 1.2em;
     text-transform: uppercase;
+    font-weight: 400;
 }
 
 #top-menu {
