@@ -9,7 +9,7 @@ body {
 h1, h2, h3, h4, h5 {
     font-family: "futura-pt",sans-serif;
     text-transform: uppercase;
-    font-weight: 500;
+    font-weight: 400;
     font-style: normal;
 }
 
@@ -31,7 +31,8 @@ h2 {
 }
 
 h3 {
-    font-size: 2.1em;
+    font-size: 24pt;
+    letter-spacing: 3px;
 }
 
 h4 {
@@ -106,20 +107,27 @@ p {
 }
 
 #statement .line1 {
-    font-size: 4.4em;
+    font-size: 59pt;
     line-height: 1.1em;
 }
 
 #statement .line2,
 #statement .line3 {
-    font-size: 2.4em;
     line-height: 1em;
     font-style: italic;
 }
 
+#statement .line2 {
+    font-size: 34pt;
+}
+
+#statement .line3 {
+    font-size: 33pt;
+}
+
 #statement .line4 {
     color: #C3AD80;
-    font-size: 2.5em;
+    font-size: 34pt;
     line-height: 2em;
     text-transform: uppercase;
 }
@@ -127,10 +135,10 @@ p {
 #statement .line5,
 #statement .line6 {
     font-family: "chaparral-pro", serif;
-    font-weight: 600;
+    font-weight: 400;
     font-style: italic;
     color: #B7A371;
-    font-size: 1.8em;
+    font-size: 30pt;
     line-height: 1em;
     font-style: italic;
 }
@@ -138,14 +146,14 @@ p {
 #statement .line7 {
     padding-top: 25px;
     color: #8B7C5A;
-    font-size: 5.2em;
+    font-size: 72pt;
     line-height: 0.7em;
     text-transform: uppercase;
 }
 
 #statement .line8 {
     color: #77694A;
-    font-size: 2.7em;
+    font-size: 36pt;
     line-height: 1em;
     text-transform: uppercase;
 }
