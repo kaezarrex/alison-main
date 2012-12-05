@@ -195,6 +195,7 @@ a:hover {
 .social a:hover {
     color: #D99172;
     text-decoration: none;
+    cursor: pointer;
 }
 
 .carousel .item > img {

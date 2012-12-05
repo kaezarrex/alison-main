@@ -1,10 +1,18 @@
 ---
 extends: base.j2
-default_block: main
 title: ???
 description: ???
 ---
 
+{% block scripts %}
+<script>
+    $('.social a:last').click(function() {
+        location.href = 'mailto:' + 'alison' + '@' + 'oneandonly.im';
+    });
+</script>
+{% endblock %}
+
+{% block main %}
 <div class="row">
     <div class="offset1 span6">
         <h1>About Me</h1>
@@ -42,5 +50,6 @@ description: ???
     <span><a href="https://twitter.com/thealisoncitron" title="Twitter" class="icon-twitter span2" target="_blank"></a></span>
     <span><a href="http://instagram.com/thealisoncitron" title="Instagram" class="icon-camera span2" target="_blank"></a></span>
     <span><a href="http://pinterest.com/iamwhimsical" title="Pinterest" class="icon-pinterest span2" target="_blank"></a></span>
-    <span><a href="#" title="Email" class="icon-envelope-alt span2"></a></span>
+    <span><a title="Email" class="icon-envelope-alt span2"></a></span>
 </div>
+{% endblock %}
