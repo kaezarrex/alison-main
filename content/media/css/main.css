@@ -90,11 +90,37 @@ a:hover {
 #bottom-menu {
     margin-top: 50px;
     padding: 20px;
+    position: relative;
 }
 
 #bottom-menu .menu-item a {
     color: #B7A371;
-    padding: 20px;
+    padding: 10px;
+    display: inline-block;
+}
+
+#bottom-menu,
+#bottom-menu:before,
+#bottom-menu:after {
+    background-color: #F0EFF1;
+}
+
+#bottom-menu:before,
+#bottom-menu:after {
+    width: 20px;
+    height: 100%;
+    display: block;
+    position: absolute;
+    bottom: 0px;
+    content: " ";
+}
+
+#bottom-menu:before {
+    left: -20px;
+}
+
+#bottom-menu:after {
+    right: -20px;
 }
 
 #statement {
