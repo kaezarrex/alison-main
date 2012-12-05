@@ -183,6 +183,15 @@ p {
     padding: 20px 0;
 }
 
+.social a {
+    color: #D0B88E;
+}
+
+.social a:hover {
+    color: #D99172;
+    text-decoration: none;
+}
+
 .carousel .item > img {
     height: 500px;
     margin: auto;
