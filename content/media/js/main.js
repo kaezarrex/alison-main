@@ -7,7 +7,8 @@ function openPopup(name, url, width, height){
             'menubar=false',
             'resizable=false',
             'status=true',
-            'toolbar=false'
+            'toolbar=false',
+            'scrollbars=yes'
         ],
         popup = window.open(url, name, properties.join(','));
 

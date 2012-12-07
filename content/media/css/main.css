@@ -105,22 +105,26 @@ a:hover {
     background-color: #F0EFF1;
 }
 
-#bottom-menu:before,
-#bottom-menu:after {
-    width: 20px;
-    height: 100%;
-    display: block;
-    position: absolute;
-    bottom: 0px;
-    content: " ";
-}
+@media (max-width: 767px) {
 
-#bottom-menu:before {
-    left: -20px;
-}
+    #bottom-menu:before,
+    #bottom-menu:after {
+        width: 20px;
+        height: 100%;
+        display: block;
+        position: absolute;
+        bottom: 0px;
+        content: " ";
+    }
 
-#bottom-menu:after {
-    right: -20px;
+    #bottom-menu:before {
+        left: -20px;
+    }
+
+    #bottom-menu:after {
+        right: -20px;
+    }
+
 }
 
 #statement {
@@ -228,6 +232,12 @@ a:hover {
 .carousel .item > img {
     height: 500px;
     margin: auto;
+}
+
+@media (min-width: 1200px) {
+    .carousel .item > img {
+        height: 600px;
+    }
 }
 
 @media (max-width: 979px) and (min-width: 768px) {
