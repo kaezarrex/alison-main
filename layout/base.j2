@@ -24,6 +24,11 @@
         <script type="text/javascript" src="//use.typekit.net/miw4xkh.js"></script>
         <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
         {% endblock headjs %}
+
+        {% block analytics %}
+        {% include "analytics.j2" %}
+        {% endblock analytics %}
+
         {% block endhead %}{% endblock endhead %}
     </head>
     <body id="{{ resource.meta.id if resource.meta.id else resource.slug }}">
@@ -69,10 +74,6 @@
         <script type="text/javascript" src="{{ media_url('js/main.js') }}"></script>
         {% block scripts %}
         {% endblock scripts %}
-
-        {% block analytics %}
-        {% include "analytics.j2" %}
-        {% endblock analytics %}
 
         {% endblock js %}
     </body>
