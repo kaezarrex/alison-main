@@ -5,7 +5,7 @@
         <meta charset="{{ resource.meta.charset }}">
 
         <title>Do what you love</title>
-        <meta name="description" content="{{ resource.meta.description }}">
+        <meta name="description" content="I specialize in creative, individualized wish-I'd-thought-of-that design solutions for creative entreprenuers who are ready to share their passion with the world.">
         <meta name="author" content="{{ resource.meta.author }}">
 
         <meta name="viewport" content="{{ resource.meta.viewport }}">
@@ -38,13 +38,24 @@
             <div id="main" role="main">
                 <header>
                     {% block nav %}
-                    <div id="top-menu" class="row">
-                        <div class="span12 visible-phone"><a href="#"><img src="{{ media_url('img/oneandonlylogo.png') }}"></a></div>
-                        <div class="span2 menu-item"><a href="{{ content_url('pricing') }}">Pricing</a></div>
-                        <div class="span2 menu-item"><a href="{{ content_url('gettingmarried') }}">Weddings</a></div>
-                        <div class="span4 hidden-phone"><a href="/"><img src="{{ media_url('img/oneandonlylogo.png') }}"></a></div>
-                        <div class="span2 menu-item"><a href="http://alisoncitron.com/blog">Blog</a></div>
-                        <div class="span2 menu-item"><a href="{{ content_url('work') }}">Work</a></div>
+                    <div class="top-menu row">
+                        <!--<div class="span12 visible-phone"><a href="#"><img src="{{ media_url('img/oneandonlylogo.png') }}"></a></div>-->
+                        <div class="span4">
+                            <ul class="top-menu-left">
+                                <li><a href="{{ content_url('gettingmarried') }}">Weddings</a></li>
+                                <li><a href="{{ content_url('pricing') }}">Work with me</a></li>
+                            </ul>
+                        </div>
+                        <div class="span4">
+                            <a href="/"><img src="{{ media_url('img/oneandonlylogo.png') }}"></a>
+                        </div>
+                        <div class="span4">
+                            <ul class="top-menu-right">
+                                <li><a href="{{ content_url('work') }}">Work</a></li>
+                                <li><a href="/blog">Blog</a></li>
+                                <li><a href="{{ content_url('contact') }}">About</a></li>
+                            </ul>
+                        </div>
                     </div>
                     {% endblock %}
                 </header>
@@ -52,25 +63,24 @@
                     {% block main %}
                     {% endblock main %}
                 </section>
+                {% block footer %}
+                <footer>
+                    <ul class="bottom-menu">
+                        <li>Site Design by One & Only</li>
+                        <li><a href="mailto:alison@oneandonly.im">alison@oneandonly.im</a></li>
+                        <li class="menu-social"><a href="https://twitter.com/thealisoncitron" title="Twitter" class="icon-twitter" target="_blank"></a></li>
+                        <li class="menu-social"><a href="http://instagram.com/thealisoncitron" title="Instagram" class="icon-camera" target="_blank"></a></li>
+                        <li class="menu-social"><a href="http://pinterest.com/thealisoncitron" title="Pinterest" class="icon-pinterest" target="_blank"></a></li>
+                    </ul>
+                </footer>
+                {% endblock footer%}
             </div>
             {% endblock container %}
         </div> <!--! end of #container -->
-        {% block footer %}
-        <footer>
-            <div id="bottom-menu">
-                <div class="container">
-                    <div class="row">
-                        <div class="span3 offset3 menu-item"><a href="{{ content_url('contact') }}">Contact</a></div>
-                        <div class="span3 menu-item"><a href="{{ content_url('pricing') }}">Work With Me</a></div>
-                    </div>
-                </div>
-            </div>
-        </footer>
-        {% endblock footer%}
         {% endblock content%}
         {% block js %}
         <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-        <script type="text/javascript" src="http://twitter.github.com/bootstrap/assets/js/bootstrap.js"></script>
+        <!--<script type="text/javascript" src="http://twitter.github.com/bootstrap/assets/js/bootstrap.js"></script>-->
         <script type="text/javascript" src="{{ media_url('js/main.js') }}"></script>
         {% block scripts %}
         {% endblock scripts %}
