@@ -17,13 +17,17 @@ h1, h2, h4 {
     color: #D0B88E;
 }
 
-h3, h5 {
+h3 {
+    color: #1E3744;
+}
+
+h5 {
     color: #D99172;
 }
 
 h1 {
     font-size: 5.2em;
-    line-height: 0.7em;
+    line-height: 1;
 }
 
 h2 {
@@ -48,6 +52,8 @@ p {
     font-style: normal;
     font-size: 1.2em;
     color: #928F80;
+    line-height: 1.5;
+    margin: 0 0 20px 0;
 }
 
 a {
@@ -233,23 +239,34 @@ a:hover {
 
 .social {
     font-size: 4em;
-    color: #D0B88E;
-    text-align: center;
+    color: #1E3744;
 }
 
 .social span {
     display: inline-block;
+    margin-left: 30px;
     padding: 20px 0;
 }
 
 .social a {
-    color: #D0B88E;
+    color: #1E3744;
 }
 
 .social a:hover {
-    color: #D99172;
+    color: #D0B88E;
     text-decoration: none;
     cursor: pointer;
+}
+
+@media (max-width: 767px) {
+
+    .social {
+        text-align: center;
+    }
+
+    .social span {
+        margin-left: 0;
+    }
 }
 
 .carousel .item > img {
@@ -336,5 +353,21 @@ a:hover {
     .mobile-full-width {
         margin-left: -20px;
         margin-right: -20px;
+    }
+}
+
+.indented {
+    margin: 0 40px;
+}
+
+@media (min-width: 1200px) {
+    .indented {
+        margin: 0 50px;
+    }
+}
+
+@media (max-width: 767px) {
+    .indented {
+        margin: 0;
     }
 }
