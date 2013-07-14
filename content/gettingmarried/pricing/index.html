@@ -1,0 +1,36 @@
+---
+extends: base.j2
+title: ???
+description: ???
+---
+
+{% block content %}
+
+<div class="container">
+    <div id="main" role="main">
+        <header>
+            {% block nav %}{{ super() }}{% endblock %}
+        </header>
+    </div>
+</div>
+
+<div class="mobile-full-width" style="position: relative;">
+    <div style="width: 100%; margin: 0 auto 30px; display: block;">
+        <img src="{{ media_url('img/pricingwed.jpg') }}" style="min-width: 921px;">
+    </div>
+    <div class="row" style="position: absolute; bottom: 40%; margin: 0 40% 0 20px; min-width: 350px;">
+        <div class="offset1 span5">
+            <p class="blue-text">
+            <span style="font-style: italic;">Every wedding is a unique reflection of the couple at the heart of it -</span>
+            and your invitations are the key to setting the tone for your wedding, and giving guests a hint of what’s to come next. I specialize in unique to you invitations featuring specialty printing, unique details and a hand crafted touch.
+            </p>
+            <p class="blue-text action-items" style="margin-top: -15px;">
+                <a href="#">Click here for a pricing sheet</a> | <a href="#">Or click here to get started</a>
+            </p>
+        </div>
+    </div>
+</div>
+
+{% block footer %}{{ super() }}{% endblock %}
+
+{% endblock %}
