@@ -325,6 +325,10 @@ a:hover {
     color: #1e3744;
 }
 
+.blue-text a {
+    color: #1e3744;
+}
+
 .action-items {
     text-align: right;
     font-style: italic;
@@ -353,6 +357,7 @@ a:hover {
     .mobile-full-width {
         margin-left: -20px;
         margin-right: -20px;
+        overflow: hidden;
     }
 }
 
