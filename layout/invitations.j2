@@ -1,0 +1,37 @@
+{% extends "base.j2" %}
+{% block main %}
+<div class="row">
+    <div class="span2">
+        <ul id="portfolio-nav" class="unstyled">
+            <li><a class="gold" href="/invitations/savethedate">savethedate</a></li>
+            <li><a class="gold" href="/invitations/silhouette">silhouette</a></li>
+            <li><a class="gold" href="/invitations/gabrielle-bachelorette">Gabrielle Bachelorette</a></li>
+            <li><a class="gold" href="/invitations/graduation">Graduation</a></li>
+            <li><a class="gold" href="/invitations/kellsie+jason">Kellsie&Jason</a></li>
+            <li><a class="gold" href="/invitations/place-cards">Place Cards</a></li>
+            <li><a class="gold" href="/invitations/babyfiefs">BabyFiefs</a></li>
+            <li><a class="gold" href="/invitations/silver-invitations">Silver Invitations</a></li>
+            <li><a class="gold" href="/invitations/vanessa">Vanessa</a></li>
+            <li><a class="gold" href="/invitations/ottersen">Ottersen</a></li>
+            <li><a class="gold" href="/invitations/watercolor">Watercolor</a></li>
+            <li><a class="gold" href="/invitations/justine+jake">Justine&Jake</a></li>
+        </ul>
+    </div>
+    <div class="span9">
+
+        <div id="myCarousel" class="carousel slide" data-interval="false">
+            <!-- Carousel items -->
+            <div class="carousel-inner">
+                {% block carousel %}{% endblock %}
+            </div>
+            <!-- Carousel nav -->
+            <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+            <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+        </div>
+
+        {% block description %}{% endblock %}
+
+    </div>
+</div>
+{% endblock %}
+
