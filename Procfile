@@ -1,1 +1,1 @@
-web: hyde gen && hyde serve --address 0.0.0.0 --port $PORT
+web: hyde gen && newrelic-admin run-program gunicorn -w 2 server:app

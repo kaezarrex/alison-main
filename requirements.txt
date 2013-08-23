@@ -1,1 +1,6 @@
-hyde==0.8.4
+Flask==0.10.1
+dropbox==1.6
+gunicorn==17.5
+hyde==0.8.8
+newrelic==1.13.1.31
+redis==2.7.6

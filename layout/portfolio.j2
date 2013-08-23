@@ -3,14 +3,9 @@
 <div class="row">
     <div class="span2">
         <ul id="portfolio-nav" class="unstyled">
-            <li><a href="/work/alico">ALICO</a></li>
-            <li><a href="/work/foundationmed">FoundationMed</a></li>
-            <li><a href="/work/cch-collection">CCH Collection</a></li>
-            <li><a href="/work/lia">I Love That Glove</a></li>
-            <li><a href="/work/walking-tour">Walking Tour</a></li>
-            <li><a href="/work/mrs-citrons-pantry">Mrs Citrons Pantry</a></li>
-            <li><a href="/work/2012-cap">2012 CAP</a></li>
-            <li><a href="/work/platypus">Platypus</a></li>
+            {% for project in projects %}
+            <li><a href="{{ project }}">{{ project }}</a></li>
+            {% endfor %}
         </ul>
     </div>
     <div class="span9">
@@ -18,7 +13,9 @@
         <div id="myCarousel" class="carousel slide" data-interval="false">
             <!-- Carousel items -->
             <div class="carousel-inner">
-                {% block carousel %}{% endblock %}
+                {% for image in images %}
+                <div class="item{% if loop.first %} active {% endif %}"><img src="{{ image }}"></div>
+                {% endfor %}
             </div>
             <!-- Carousel nav -->
             <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
