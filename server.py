@@ -1,6 +1,6 @@
 import os
 
-from flask import Flask, render_template, send_from_directory
+from flask import Flask, Markup, render_template, send_from_directory
 import redis
 
 import portfolio
@@ -19,10 +19,13 @@ redis = redis.from_url(redis_url)
 
 
 def portfolio_handler(category, path):
+    full_path = os.path.join('/', category, path)
     projects = portfolio.projects(category)
-    images = portfolio.image_urls(os.path.join('/', category, path))
+    images = portfolio.image_urls(full_path)
+    description = Markup(portfolio.description_html(full_path))
     return render_template('portfolio.j2', category=category,
-                           projects=projects, images=images)
+                           projects=projects, images=images,
+                           description=description)
 
 
 @app.route('/')
