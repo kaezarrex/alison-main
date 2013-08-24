@@ -10,22 +10,30 @@ app = Flask(__name__, static_folder='deploy', template_folder='layout')
 
 
 @memorize
-def portfolio_handler(category, path):
-
+def portfolio_data(category, path):
     dropbox_path = os.path.join('/', category, path)
 
     if not portfolio.is_project(dropbox_path):
-        return redirect('/' + category)
+        return None
 
     projects = portfolio.projects(category)
 
-    images = portfolio.image_urls(dropbox_path)
+    images = list(portfolio.image_urls(dropbox_path))
     description = portfolio.description_html(dropbox_path)
     description = Markup(description) if description is not None else None
 
-    return render_template('portfolio.j2', category=category,
-                           projects=projects, images=images,
-                           description=description)
+    return dict(category=category, projects=projects, images=images,
+                description=description)
+
+
+def portfolio_handler(category, path):
+
+    params = portfolio_data(category, path)
+
+    if params is None:
+        return redirect('/' + category)
+
+    return render_template('portfolio.j2', **params)
 
 
 @app.route('/')
