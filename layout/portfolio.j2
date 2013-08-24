@@ -4,7 +4,7 @@
     <div class="span2">
         <ul id="portfolio-nav" class="unstyled">
             {% for project in projects %}
-            <li><a href="{{ project }}">{{ project }}</a></li>
+            <li><a href="{{ project['src'] }}">{{ project['name'] }}</a></li>
             {% endfor %}
         </ul>
     </div>
@@ -22,7 +22,9 @@
             <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
         </div>
 
+        {% if description != None %}
         {{ description }}
+        {% endif %}
 
     </div>
 </div>

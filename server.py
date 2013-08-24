@@ -1,28 +1,26 @@
 import os
 
-from flask import Flask, Markup, render_template, send_from_directory
-import redis
+from flask import Flask, Markup, redirect, render_template, send_from_directory
 
 import portfolio
 
 
-ROOT_PATH = 'index.html'
-
 app = Flask(__name__, static_folder='deploy', template_folder='layout')
-redis_url = os.getenv('REDISTOGO_URL', 'redis://localhost:6379')
-redis = redis.from_url(redis_url)
-
-
-# @app.route('/')
-# def root_handler():
-#     return send_from_directory(app.static_folder, ROOT_PATH)
 
 
 def portfolio_handler(category, path):
-    full_path = os.path.join('/', category, path)
+
+    dropbox_path = os.path.join('/', category, path)
+
+    if not portfolio.is_project(dropbox_path):
+        return redirect('/' + category)
+
     projects = portfolio.projects(category)
-    images = portfolio.image_urls(full_path)
-    description = Markup(portfolio.description_html(full_path))
+
+    images = portfolio.image_urls(dropbox_path)
+    description = portfolio.description_html(dropbox_path)
+    description = Markup(description) if description is not None else None
+
     return render_template('portfolio.j2', category=category,
                            projects=projects, images=images,
                            description=description)
@@ -41,6 +39,11 @@ def media_handler(path):
 @app.route('/work/<path:path>')
 def work_handler(path):
     return portfolio_handler('work', path)
+
+
+@app.route('/gettingmarried/stationery/<path:path>')
+def stationery_handler(path):
+    return portfolio_handler('gettingmarried/stationery', path)
 
 
 @app.route('/<path:path>')
