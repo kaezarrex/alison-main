@@ -2,12 +2,14 @@ import os
 
 from flask import Flask, Markup, redirect, render_template, send_from_directory
 
+from decorators import memorize
 import portfolio
 
 
 app = Flask(__name__, static_folder='deploy', template_folder='layout')
 
 
+@memorize
 def portfolio_handler(category, path):
 
     dropbox_path = os.path.join('/', category, path)
