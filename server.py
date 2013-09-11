@@ -10,6 +10,20 @@ app = Flask(__name__, static_folder='deploy', template_folder='layout')
 
 
 @memorize
+def portfolio_index_data(category):
+    return portfolio.projects(category)
+
+
+def portfolio_index_handler(category):
+    projects = portfolio_index_data(category)
+
+    if len(projects) == 0:
+        return ''
+
+    return redirect(projects[0]['src'])
+
+
+@memorize
 def portfolio_data(category, path):
     dropbox_path = os.path.join('/', category, path)
 
@@ -46,9 +60,19 @@ def media_handler(path):
     return send_from_directory(app.static_folder, os.path.join('media', path))
 
 
+@app.route('/work')
+def work_root_handler():
+    return portfolio_index_handler('work')
+
+
 @app.route('/work/<path:path>')
 def work_handler(path):
     return portfolio_handler('work', path)
+
+
+@app.route('/gettingmarried/stationery')
+def stationery_root_handler():
+    return portfolio_index_handler('gettingmarried/stationery')
 
 
 @app.route('/gettingmarried/stationery/<path:path>')

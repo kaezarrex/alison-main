@@ -9,9 +9,11 @@ client = dropbox.client.DropboxClient(ACCESS_TOKEN)
 
 def _project_src(dropbox_path):
     ''' Given a dropbox path, return an html src
-    Example: /work/3-CCH Collection -> cch-collection
+    Example: /work/3-CCH Collection -> /work/cch-collection
     '''
-    return dropbox_path.split('-', 1)[-1].lower().replace(' ', '-')
+    parts = dropbox_path.split('/')
+    parts[-1] = parts[-1].split('-', 1)[-1].lower().replace(' ', '-')
+    return '/'.join(parts)
 
 
 def _project_name(dropbox_path):
@@ -26,10 +28,9 @@ def _project_path(src):
     Example: /work/cch-collection -> /work/3-CCH Collection
     '''
     dropbox_path = '/' + '/'.join(src.split('/')[:-1])
-    key = src.split('/')[-1]
     contents = client.metadata(dropbox_path)['contents']
     dirs = dict((_project_src(c['path']), c['path']) for c in contents if c['is_dir'])
-    return dirs.get(key)
+    return dirs.get(src)
 
 
 def is_project(dir_path):
