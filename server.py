@@ -9,6 +9,17 @@ import portfolio
 app = Flask(__name__, static_folder='deploy', template_folder='layout')
 
 
+class Resource():
+
+    class Meta():
+        category = None
+
+    meta = Meta()
+
+    def __init__(self, category=None):
+        self.meta.category = category
+
+
 @memorize
 def portfolio_index_data(category):
     return portfolio.projects(category)
@@ -40,14 +51,17 @@ def portfolio_data(category, path):
                 description=description)
 
 
-def portfolio_handler(category, path):
+def portfolio_handler(category, path, resource=None):
 
     params = portfolio_data(category, path)
 
     if params is None:
         return redirect('/' + category)
 
-    return render_template('portfolio.j2', **params)
+    if resource is None:
+        resource = Resource()
+
+    return render_template('portfolio.j2', resource=resource, **params)
 
 
 @app.route('/')
@@ -77,7 +91,8 @@ def stationery_root_handler():
 
 @app.route('/gettingmarried/stationery/<path:path>')
 def stationery_handler(path):
-    return portfolio_handler('gettingmarried/stationery', path)
+    resource = Resource('weddings')
+    return portfolio_handler('gettingmarried/stationery', path, resource)
 
 
 @app.route('/<path:path>')

@@ -1,0 +1,50 @@
+---
+extends: base.j2
+category: weddings
+title: ???
+description: ???
+---
+
+{% block scripts %}
+<script>
+    $('.social a:last').click(function() {
+        location.href = 'mailto:' + 'alison' + '@' + 'oneandonly.im';
+    });
+</script>
+{% endblock %}
+
+{% block main %}
+<div class="row">
+    <h1 class="span12">About Me</h1>
+    <h3 class="span12">My name is Alison Citron</h3>
+    <div class="span7">
+        <div class="indented">
+            <p>
+            I am a graphic designer living in North Carolina, and working with clients all over the United States. In my spare time I blog about my crafty exploits at Field Notes From My Couch, and see how many hours I can log snuggling with my dog.
+            </p>
+            <p>
+            Have you signed up for my newsletter yet? Real Talk is a peek into what it’s really like to run a small creative business - from the good to the bad, I don’t hold back!
+            </p>
+            <p>
+            Curious about my pricing? Enter your email address here to get my pricing sheet - I’ll never share your email with anyone!
+            </p>
+        </div>
+    </div>
+    <div class="span5" style="text-align: center;">
+        <img src="{{ media_url('img/aboutalison.png') }}">
+    </div>
+</div>
+<div class="row">
+    <h2 class="span12">Get In Touch</h2>
+</div>
+<div class="row">
+    <hr class="span12" />
+</div>
+<div class="row social">
+    <span><a href="http://www.facebook.com/pages/Love-Citron/308198629206234" title="Facebook" class="icon-facebook span2" target="_blank"></a></span>
+    <span><a href="https://twitter.com/thealisoncitron" title="Twitter" class="icon-twitter span2" target="_blank"></a></span>
+    <span><a href="http://instagram.com/thealisoncitron" title="Instagram" class="icon-camera span2" target="_blank"></a></span>
+    <span><a href="http://pinterest.com/iamwhimsical" title="Pinterest" class="icon-pinterest span2" target="_blank"></a></span>
+    <span><a title="Email" class="icon-envelope-alt span2"></a></span>
+</div>
+{% endblock %}

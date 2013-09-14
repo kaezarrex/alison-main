@@ -65,6 +65,30 @@ a:hover {
 
 }
 
+.logo {
+    position: relative;
+    margin: auto;
+    max-width: 370px;
+    min-height: 64px;
+}
+
+.logo .logo-catgory,
+.logo a.logo-category,
+.logo a.logo-category:hover {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    right: 0px;
+    bottom: -5px;
+    text-decoration: none;
+    text-transform: none;
+    font-family: "chaparral-pro", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.3em;
+    color: #b7a371;
+}
+
 .top-menu {
     font-size: 1.2em;
     text-transform: uppercase;

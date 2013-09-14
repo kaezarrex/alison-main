@@ -36,24 +36,11 @@
             <div id="main" role="main">
                 <header>
                     {% block nav %}
-                    <div class="top-menu row">
-                        <div class="span4">
-                            <ul class="top-menu-left">
-                                <li><a href="/gettingmarried">Weddings</a></li>
-                                <li><a href="/pricing">Work with me</a></li>
-                            </ul>
-                        </div>
-                        <div class="span4">
-                            <a href="/"><img src="/media/img/oneandonlylogo.png"></a>
-                        </div>
-                        <div class="span4">
-                            <ul class="top-menu-right">
-                                <li><a href="/work">Work</a></li>
-                                <li><a href="/blog">Blog</a></li>
-                                <li><a href="/contact">About</a></li>
-                            </ul>
-                        </div>
-                    </div>
+                    {% if resource.meta.category == 'weddings' %}
+                    {% include "nav-weddings.j2" %}
+                    {% else %}
+                    {% include "nav-main.j2" %}
+                    {% endif %}
                     {% endblock %}
                 </header>
                 <section class="content">
