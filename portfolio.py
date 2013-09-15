@@ -13,7 +13,7 @@ def _project_src(dropbox_path):
     '''
     parts = dropbox_path.split('/')
     parts[-1] = parts[-1].split('-', 1)[-1].lower().replace(' ', '-')
-    parts[-1] = parts[-1].replace('.', '').replace('\'', '')
+    parts[-1] = parts[-1].replace('.', '').replace('\'', '').replace('&', 'and')
     return '/'.join(parts)
 
 
