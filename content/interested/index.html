@@ -1,0 +1,37 @@
+---
+extends: base.j2
+---
+
+{% block content %}
+
+<div class="container">
+    <div id="main" role="main">
+        <header>
+            {% block nav %}{{ super() }}{% endblock %}
+        </header>
+    </div>
+</div>
+
+<div class="mobile-full-width" style="position: relative;">
+    <div style="width: 100%; margin: 0 auto 30px; display: block;">
+        <img src="{{ media_url('img/pricingwed.jpg') }}" style="min-width: 921px;">
+    </div>
+    <div class="row" style="position: absolute; top: 15%; margin: 0 40% 0 20px; min-width: 350px;">
+        <div class="offset1 span5">
+            <p class="blue-text">
+            <span style="font-style: italic;">Here's my goal: to help small business owners make a big splash</span>
+            with their branding, online presence, and to come up with solutions for even the smallest problems. I love to design fresh new websites, am crazy about helping bloggers take their blog design to the next level, and get weak in the knees for putting together a solid brand that will present a polished, professional, and creative look across the board.
+            </p>
+            <p class="blue-text">
+            Curious about my pricing? While each project is unique and requires a personalized estimate, I’ve put together a pricing guide to walk you through my services, what the process is like, and to give you an idea of my starting rates.
+            </p>
+            <p class="blue-text action-items">
+                <a href="#">Click here for a pricing sheet</a> | <a href="mailto:alison@oneandonly.im">Or click here to email me</a>
+            </p>
+        </div>
+    </div>
+</div>
+
+{% block footer %}{{ super() }}{% endblock %}
+
+{% endblock %}
