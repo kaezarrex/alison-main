@@ -95,6 +95,11 @@ def stationery_handler(path):
     return portfolio_handler('gettingmarried/stationery', path, resource)
 
 
+@app.route('/blog')
+def blog_handler():
+    return redirect('http://alisoncitron.com/blog')
+
+
 @app.route('/<path:path>')
 def path_handler(path):
     return send_from_directory(app.static_folder, os.path.join(path, 'index.html'))
