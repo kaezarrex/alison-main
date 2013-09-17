@@ -334,13 +334,13 @@ a:hover {
 }
 
 .ribbon-blue:before {
-    border-width: 50px 0 50px 10px;
+    border-width: 30px 0 30px 10px;
     border-color: transparent transparent transparent #ffffff;
     left: 0;
 }
 
 .ribbon-blue:after {
-    border-width: 50px 10px 50px 0;
+    border-width: 30px 10px 30px 0;
     border-color: transparent #ffffff transparent transparent;
     right: 0;
 }
@@ -358,16 +358,6 @@ a:hover {
     font-style: italic;
     font-weight: 600;
     font-size: 1.2em;
-}
-
-@media (min-width: 1200px) {
-    .ribbon-blue:before {
-        border-width: 30px 0 30px 10px;
-    }
-
-    .ribbon-blue:after {
-        border-width: 30px 10px 30px 0;
-    }
 }
 
 @media (max-width: 767px) {
